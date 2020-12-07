@@ -1,0 +1,35 @@
+[33mcommit f1bfcf52595e8d4dd0e32aafecddbbd902dc84ad[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: kshitij7890 <kshitijsingla7890@gmail.com>
+Date:   Tue Dec 8 03:04:44 2020 +0530
+
+    Creating a new custom widget
+
+[33mcommit e8bcc224e5bc2b4f4977e55e79f03852928ea9e5[m
+Author: kshitij7890 <kshitijsingla7890@gmail.com>
+Date:   Tue Dec 8 02:46:00 2020 +0530
+
+    Using underscore for private properties
+
+[33mcommit 05188f4bb53825b68d7e7cbbde33aacb70ff968a[m
+Author: kshitij7890 <kshitijsingla7890@gmail.com>
+Date:   Tue Dec 8 02:40:18 2020 +0530
+
+    Using Stateful widget correctly
+
+[33mcommit da0cb00d93217f68c4afaaee8d3dbabbd76e80f4[m
+Author: kshitij7890 <kshitijsingla7890@gmail.com>
+Date:   Tue Dec 8 02:19:48 2020 +0530
+
+    Using Stateless widget incorrectly
+
+[33mcommit dc196d85523d30b168325a096f73a57dbcbf9b1b[m
+Author: kshitij7890 <kshitijsingla7890@gmail.com>
+Date:   Tue Dec 8 01:26:22 2020 +0530
+
+    Basic layout widgets added
+
+[33mcommit 6e8ad5572a7eb2f9b01c4d2d25b624ecad93ebc1[m
+Author: kshitij7890 <kshitijsingla7890@gmail.com>
+Date:   Tue Dec 1 22:14:40 2020 +0530
+
+    first commit
