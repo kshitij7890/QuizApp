@@ -5,14 +5,34 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  @override
+  @override // decorator to make code cleaner
   Widget build(BuildContext context) {
+    var questions = [
+      'What\'s your favourite animal?',
+      'What\'s your favourite color?',
+    ];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text('My First App'),
         ),
-        body: Text('Default Text'),
+        body: Column(
+          children: [
+            Text('The Ques'),
+            RaisedButton(
+              child: Text('Answer 1'),
+              onPressed: null,
+            ),
+            RaisedButton(
+              child: Text('Answer 1'),
+              onPressed: null,
+            ),
+            RaisedButton(
+              child: Text('Answer 1'),
+              onPressed: null,
+            ),
+          ],
+        ), // commas at end -> proper formation of code tree
       ),
     );
   }
