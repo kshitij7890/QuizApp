@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import './quiz.dart';
 import './result.dart';
 
@@ -14,32 +15,55 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final _questions = const [
     {
-      'questionText': 'What\'s your favorite color?',
-      'answers': ['Black', 'Red', 'Green', 'White'],
+      'questionText': 'Simplify : 3 + 6 x (5 + 4) ÷ 3 - 7',
+      'answers': [
+        {'text': '11', 'score': 0},
+        {'text': '16', 'score': 0},
+        {'text': '14', 'score': 1},
+        {'text': '15', 'score': 0},
+      ],
     },
     {
-      'questionText': 'What\'s your favorite animal?',
-      'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion'],
+      'questionText': 'Solve : 24 + 4 ÷ 4',
+      'answers': [
+        {'text': '25', 'score': 1},
+        {'text': '6', 'score': 0},
+        {'text': '12', 'score': 0},
+        {'text': '28', 'score': 0},
+      ],
     },
     {
-      'questionText': 'Who\'s your favorite instructor?',
-      'answers': ['Max1', 'Max2', 'Max3', 'Max4'],
+      'questionText': 'Solve : 200 – (96 ÷ 4)',
+      'answers': [
+        {'text': '105', 'score': 0},
+        {'text': '175', 'score': 0},
+        {'text': '176', 'score': 1},
+        {'text': '122', 'score': 0},
+      ],
     },
   ]; //we used maps here(key,value)
-
   var _questionIndex = 0;
+  var _totalScore = 0;
 
-  void _answerQuestion() {
+  void _resetQuiz() {
+    setState(() {
+      _questionIndex = 0;
+      _totalScore = 0;
+    });
+  }
+
+  void _answerQuestion(int score) {
+    _totalScore += score;
+
     setState(() {
       //to re-run build() when property is changed
       _questionIndex = _questionIndex + 1;
     });
-
     print(_questionIndex);
     if (_questionIndex < _questions.length) {
-      print('We have more questions');
+      print('We have more questions!');
     } else {
-      print('No more questions');
+      print('No more questions!');
     }
   }
 
@@ -56,7 +80,7 @@ class _MyAppState extends State<MyApp> {
                 questionIndex: _questionIndex,
                 questions: _questions,
               )
-            : Result(),
+            : Result(_totalScore, _resetQuiz),
       ),
     );
   }
