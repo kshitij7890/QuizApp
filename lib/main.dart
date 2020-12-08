@@ -15,11 +15,11 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final _questions = const [
     {
-      'questionText': 'Simplify : 3 + 6 x (5 + 4) ÷ 3 - 7',
+      'questionText': 'Simplify : 3 + 6 x (5 + 4)',
       'answers': [
         {'text': '11', 'score': 0},
-        {'text': '16', 'score': 0},
-        {'text': '14', 'score': 1},
+        {'text': '14', 'score': 0},
+        {'text': '57', 'score': 1},
         {'text': '15', 'score': 0},
       ],
     },
@@ -72,7 +72,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My First App'),
+          title: Text('QuizApp'),
         ),
         body: _questionIndex < _questions.length
             ? Quiz(
